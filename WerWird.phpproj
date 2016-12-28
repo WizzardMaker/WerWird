@@ -1,0 +1,78 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Name>WerWird</Name>
+    <ProjectGuid>{0454a156-5536-4456-bb4b-00e3b365908b}</ProjectGuid>
+    <RootNamespace>
+    </RootNamespace>
+    <OutputType>Library</OutputType>
+    <ProjectTypeGuids>{A0786B88-2ADB-4C21-ABE8-AA2D79766269}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <IncludeDebugInformation>true</IncludeDebugInformation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <IncludeDebugInformation>false</IncludeDebugInformation>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="admin\admin.php" />
+    <Compile Include="admin\delcookie.php" />
+    <Compile Include="admin\delfile.php" />
+    <Compile Include="admin\delfile_modify.php" />
+    <Compile Include="admin\delquests.php" />
+    <Compile Include="admin\delquests_sure.php" />
+    <Compile Include="admin\download.php" />
+    <Compile Include="admin\editquest.php" />
+    <Compile Include="admin\getcookie-inf.php" />
+    <Compile Include="admin\getthequest.php" />
+    <Compile Include="admin\inc_func.php" />
+    <Compile Include="admin\login.php" />
+    <Compile Include="admin\logout.php" />
+    <Compile Include="admin\modifyfile.php" />
+    <Compile Include="admin\setonoff.php" />
+    <Compile Include="admin\setpwd.php" />
+    <Compile Include="admin\writenewpwd.php" />
+    <Compile Include="admin\writethefile.php" />
+    <Compile Include="files\old\000.frage" />
+    <Compile Include="files\old\001.frage" />
+    <Compile Include="files\old\002.frage" />
+    <Compile Include="files\old\003.frage" />
+    <Compile Include="files\old\004.frage" />
+    <Compile Include="files\old\005.frage" />
+    <Compile Include="files\old\006.frage" />
+    <Compile Include="files\old\007.frage" />
+    <Compile Include="files\old\008.frage" />
+    <Compile Include="files\old\7cPhysik.mil" />
+    <Compile Include="files\old\blah.php" />
+    <Compile Include="files\old\temp.txt" />
+    <Compile Include="files\old\test.mil" />
+    <Compile Include="files\7cPhysik.mil" />
+    <Compile Include="files\blah.php" />
+    <Compile Include="files\qwe.mil" />
+    <Compile Include="files\temp.txt" />
+    <Compile Include="files\test.mil" />
+    <Compile Include="admin.php" />
+    <Compile Include="bg-old.jpg" />
+    <Compile Include="bg.jpg" />
+    <Compile Include="button_del.jpg" />
+    <Compile Include="del_pic.gif" />
+    <Compile Include="eingabe.php" />
+    <Compile Include="frei.txt" />
+    <Compile Include="inc_footer.php" />
+    <Compile Include="inc_header.php" />
+    <Compile Include="index.php" />
+    <Compile Include="infoo.php" />
+    <Compile Include="pwd.php" />
+    <Compile Include="pwd.txt" />
+    <Compile Include="register_globals.txt" />
+    <Compile Include="spacer.gif" />
+    <Compile Include="version.txt" />
+    <Compile Include="WerWird.phpproj" />
+    <Compile Include="writefile.php" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="admin" />
+    <Folder Include="files\old" />
+    <Folder Include="files" />
+  </ItemGroup>
+</Project>
