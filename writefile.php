@@ -82,7 +82,7 @@
 	}
 	else {
 //		echo "<font color=\"#008000\">-----------------------------------------------<br>keine Fehler<br>-----------------------------------------------<br></font><br>";
-		$inhalt_file = "empty\nfrage.jpg\n".$Pschwierigkeit."\n".$Prichtigeantwort."\n".$Pfrage."\n".$Pantworta."\n".$Pantwortb."\n".$Pantwortc."\n".$Pantwortd."\n".$Pjoker50_1."\n".$Pjoker50_2."\n#\n";
+		$inhalt_file = "empty".PHP_EOL."frage.jpg".PHP_EOL.$Pschwierigkeit.PHP_EOL.$Prichtigeantwort.PHP_EOL.$Pfrage.PHP_EOL.$Pantworta.PHP_EOL.$Pantwortb.PHP_EOL.$Pantwortc.PHP_EOL.$Pantwortd.PHP_EOL.$Pjoker50_1.PHP_EOL.$Pjoker50_2.PHP_EOL."#".PHP_EOL;
 //		echo "Inhalt für die Datei:<br>-----------------------------------------------<br> ".$inhalt_file."-----------------------------------------------<br>";
 
 
