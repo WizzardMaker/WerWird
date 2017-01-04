@@ -1,1 +1,1 @@
-http://www.kaffeetalk.de/register_globals-in-php-5-5-nutzen/
+http://www.kaffeetalk.de/register_globals-in-php-5-5-nutzen/ 
