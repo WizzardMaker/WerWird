@@ -21,12 +21,12 @@
 //	echo "Antwort D: ".$Pantwortd."<br>";
 	
 	$ausgabe = "";
-	$joker50_fehler = FALSE;
-	$frage_fehler = FALSE;
-	$antworta_fehler = FALSE;
-	$antwortb_fehler = FALSE;
-	$antwortc_fehler = FALSE;
-	$antwortd_fehler = FALSE;
+	$joker50_fehler = false;
+	$frage_fehler = false;
+	$antworta_fehler = false;
+	$antwortb_fehler = false;
+	$antwortc_fehler = false;
+	$antwortd_fehler = false;
 	
 	//Eingabefehler auswerten
 	$fehler = 0;

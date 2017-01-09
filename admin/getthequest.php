@@ -9,7 +9,7 @@
 		//mind. ein Parameter
 		if ($_SERVER['argc'] == 1) {
 			//genau ein Parameter
-			$parameter = $_SERVER['argv'][0]; //holt den benötigten Parameter
+			$parameter = $_SERVER['argv'][0]; //holt den benï¿½tigten Parameter
 			//echo "P:$parameter<br>";
 			parse_str($parameter); //zerlegt den Parameter
 		}//endif
@@ -29,10 +29,10 @@
 //		include("./admin.php");
 //	}
 //	else {
-	//alle files öffnen und in feld schreiben
+	//alle files ï¿½ffnen und in feld schreiben
 		$filepath = "../files/";
 
-		$lastname_int = lastfilename_int($filepath, ".frage"); //enthält den int-wert des letzten files im verz.
+		$lastname_int = lastfilename_int($filepath, ".frage"); //enthï¿½lt den int-wert des letzten files im verz.
 //		echo "max-file:".$lastname_int."<br>";
 
 		if 	($lastname_int > "-1") {
@@ -89,7 +89,7 @@
 		
 			for ($i=0; $i<count($inhalt_feld); $i++) {
 			   	if (!$handle = fopen($filename, "a")) {
-//		        	print "Kann die Datei $filename nicht öffnen";
+//		        	print "Kann die Datei $filename nicht ï¿½ffnen";
 		   	     	exit;
 				}
 			    if (!fputs($handle, $inhalt_feld[$i])) {

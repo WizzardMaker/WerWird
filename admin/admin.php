@@ -28,6 +28,7 @@
 				<tr>
 					<td>
 						<form action="login.php" method="post">
+                            <input type="hidden" name="time" value="<?php echo time(); ?>" />
 							<table align="center">
 								<tr>
 									<td bgcolor="#ffffff"><font face="Arial" size="2">Username:</font></td>

@@ -1,4 +1,4 @@
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Name>WerWird</Name>
@@ -25,6 +25,7 @@
     <Compile Include="admin\editquest.php" />
     <Compile Include="admin\getcookie-inf.php" />
     <Compile Include="admin\getthequest.php" />
+    <Compile Include="admin\inc_cookie.php" />
     <Compile Include="admin\inc_func.php" />
     <Compile Include="admin\login.php" />
     <Compile Include="admin\logout.php" />
@@ -72,6 +73,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="admin" />
+    <Folder Include="admin\logins\" />
     <Folder Include="files\old" />
     <Folder Include="files" />
   </ItemGroup>
