@@ -1,27 +1,40 @@
 ﻿<?php include("./getcookie-inf.php"); ?>
 <?php
-	if(isset($_POST["username"])){
-		$Pusername = $_POST["username"];
-		$Ppwd = $_POST["pwd"];
+	if(isset($_POST["username"]) && isset($_POST["time"]) ){
+        if((int)$_POST["time"] - time() > -2700){
+            $Pusername = $_POST["username"];
+            $Ppwd = $_POST["pwd"];
+        }else{
+            $Pusername = "";
+            $Ppwd = "";
+        }
 	}else{
 		$Pusername = "";
 		$Ppwd = "";
 	}
-		
+
 	//echo "username: ".$Pusername."<br>";
 	$login = false;
-	
+
 	//Authentifizierunh �ber Parameter und Cookie pr�fen:
 	//Fall 1: Parameter + und cookie - 	-> login + und cookie setzten
 	//Fall 2: Parameter + und cookie + 	-> login +
 	//Fall 3: Parameter - und cookie -	-> login - und ausgabe fehlgeschlagen
 	//Fall 4: Parameter - und cookie + 	-> login +
-	
+
+    //$test = hasIP("logins/logins.login");
+    $hasIP = hasIP("logins/logins.login");
+
 	if (($Pusername == "master") && ($Ppwd == "mko09ijn")) {
 		//Fall 1 und Fall 2
-		if ($AdminCookie != "master") {
+		if ($AdminCookie != "master" && ($hasIP != true)) {
 //			echo "Fall 1";
-			$test = setcookie ("wwadmin", "master", time()+2700, "/"); 
+
+			//$test = setcookie ("wwadmin", "master", time()+2700, "/");
+            $cookieFile = fopen("logins/logins.login", "a+") or die("Kann die Datei "."logins/logins.login nicht zum schreiben öffnen! Fehler war:'".error_get_last()["message"]."'");
+            fwrite($cookieFile,$_SERVER["REMOTE_ADDR"]."\t".date("U").PHP_EOL);//Zeit seit start der UNIX Epoche in Sekunden
+            fclose($cookieFile);
+            $AdminCookie = "master";
 //			$keks = setcookie("admin", $loginName, time()+3600*24*365, "/");
 		}
 		else {
@@ -30,8 +43,9 @@
 		$login = true;
 	}
 	else {
-		//Fall 3 und Fall 4
-		if ($AdminCookie != "master") {
+		//Fall 3 und Fall 4hasIP("logins/logins.login")
+
+		if ($AdminCookie != "master" && ($hasIP != true)) {
 //			echo "Fall 3";
 		}
 		else {
@@ -142,7 +156,9 @@
 		</tr>
 	</table>
 <?php
-	include("./admin.php");
+	//include("./admin.php");
+
+    header('Location: ./admin.php');
 	}
 
 ?>
