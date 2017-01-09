@@ -10,7 +10,7 @@
 		//mind. ein Parameter
 		if ($_SERVER['argc'] == 1) {
 			//genau ein Parameter
-			$parameter = $_SERVER['argv'][0]; //holt den benötigten Parameter
+			$parameter = $_SERVER['argv'][0]; //holt den benï¿½tigten Parameter
 			//echo "P:$parameter<br>";
 			parse_str($parameter); //zerlegt den Parameter
 		}//endif
@@ -28,7 +28,7 @@
 //echo $wert;
 				$filename = "../frei.txt";
 			   	if (!$handle = fopen($filename, "w")) {
-//		        	print "Kann die Datei $filename nicht öffnen";
+//		        	print "Kann die Datei $filename nicht ï¿½ffnen";
 		   	     	exit;
 				}
 			    if (!fputs($handle, $wert)) {

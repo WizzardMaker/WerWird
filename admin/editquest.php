@@ -19,7 +19,7 @@
 		
 	}
 	
-	if ($argc > 0) {
+	/*if ($argc > 0) {
 		//mind. ein Parameter
 		if ($_SERVER['argc'] == 1) {
 			//genau ein Parameter
@@ -34,7 +34,7 @@
 	}//endif
 	else {
 		//keine Parameter
-	}
+	}*/
 // ********************************************************
 
 	//username und pwd auswerten
@@ -292,9 +292,21 @@
 								<td align="center" colspan="2">
 									<img src="spacer.gif" border="0" alt="" width="1" height="5"><br>
 									<?php
-										$delfilename = $filenames_feld[$aktfilenr];
-										echo "<a href=\"./delfile_modify.php?filepath=$filepath&delfilename=$delfilename&username='master'&pwd='mko09ijn'\"><img src=\"../button_del.jpg\" border=\"0\"></a>";
+									    $delfilename = $filenames_feld[$aktfilenr];
+
+										//echo "<a href=\"./delfile_modify.php?filepath=$filepath&delfilename=$delfilename\"><img src=\"../button_del.jpg\" border=\"0\"></a>\n";
 									?>
+                                        <button id="delete">Entfernen</button>
+                                        <script>
+                                            var btn = document.getElementById("delete");
+                                            btn.onclick = function() {
+                                                var r = confirm("Wirklich Entfernen?");
+                                                if (r == true) {
+                                                    window.location = "<?php echo "./delfile_modify.php?filepath=$filepath&delfilename=$delfilename";?>";
+                                                }
+                                                return false;
+                                            };
+                                        </script>
 								</td>
 							</tr>
 						</table>						

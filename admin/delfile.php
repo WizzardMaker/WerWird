@@ -1,8 +1,8 @@
 <?php include("./getcookie-inf.php"); ?>
 <?php
 //Parameter auswerten -> weil registerglobals off
-//	echo $_SERVER['argc'];
-	if (isset($_SERVER['argc'])) {
+	echo "HOOOOLLLLLAAAAA";
+	/*if (isset($_SERVER['argc'])) {
 		//mind. ein Parameter
 		if ($_SERVER['argc'] == 1) {
 			//genau ein Parameter
@@ -17,7 +17,7 @@
 	}//endif
 	else {
 		//keine Parameter
-	}
+	}*/
 // ********************************************************
 
 //echo $delfilename;

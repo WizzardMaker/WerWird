@@ -8,7 +8,7 @@
 		//mind. ein Parameter
 		if ($_SERVER['argc'] == 1) {
 			//genau ein Parameter
-			$parameter = $_SERVER['argv'][0]; //holt den benötigten Parameter
+			$parameter = $_SERVER['argv'][0]; //holt den benï¿½tigten Parameter
 			//echo "P:$parameter<br>";
 			parse_str($parameter); //zerlegt den Parameter
 		}//endif
@@ -27,12 +27,10 @@ if ($AdminCookie != "master") {
 }
 else {
 	$delfilename = $_GET["delfilename"];
-	$username = $_GET["username"];
-	$pwd = $_GET["pwd"];
 	
 	//echo $delfilename;
 	$filepath = "../files/";
-	$lastname_int = lastfilename_int($filepath, ".frage"); //enthält den int-wert des letzten files im verz.
+	$lastname_int = lastfilename_int($filepath, ".frage"); //enthï¿½lt den int-wert des letzten files im verz.
 	//		echo "max-file:".$lastname_int."<br>";
 
 		if 	($lastname_int > "-1") {
@@ -57,7 +55,7 @@ else {
 //	echo "akt= ".$aktfilenr."<br>";
 	$maxfilenr = $i-1;
 	
-	//nächstes file
+	//nï¿½chstes file
 	if ($aktfilenr+1 <= $maxfilenr) {
 		//echo "naechstes File: ".$filenames_feld[$aktfilenr+1]."<br>";
 		$nextfile = $filenames_feld[$aktfilenr+1];
@@ -70,10 +68,10 @@ else {
 	//username und pwd auswerten
 	if (file_exists($delfilename)) {
 		if (unlink($delfilename)) {
-//				echo "gelöscht<br>";
+//				echo "gelï¿½scht<br>";
 		}
 		else {
-//				echo "löschen nicht möglich<br>";
+//				echo "lï¿½schen nicht mï¿½glich<br>";
 		}
 	}
 	else {
