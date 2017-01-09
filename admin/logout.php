@@ -1,6 +1,6 @@
 ﻿<?php
 
-	if (isset($AdminCookie) && $AdminCookie == "master") {
+	//if (isset($AdminCookie) && $AdminCookie == "master") {
 ?>
 	<table align="center">
 		<tr>
@@ -12,5 +12,5 @@
 		</tr>
 	</table>
 <?php
-	}
+	//}
 ?>
