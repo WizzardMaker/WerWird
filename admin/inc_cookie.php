@@ -1,5 +1,7 @@
 <?php
 function hasIP($filePath, $ip = NULL){
+    return false; //Nicht mehr gebraucht :(
+
     //$cookieFile = fopen($filePath, "r") or die("Kann die Datei $filePath nicht zum lesen öffnen!");
     //$content = fread($cookieFile,filesize($filePath));//fwrite($cookieFile,date("U"));//Zeit seit start der UNIX Epoche in Sekunden
     //fclose($cookieFile);
@@ -36,6 +38,8 @@ function hasIP($filePath, $ip = NULL){
 }
 
 function removeIP($filePath, $ip = NULL){
+    return false; //Nicht mehr gebraucht :(
+
     //$cookieFile = fopen($filePath, "r") or die("Kann die Datei $filePath nicht zum lesen öffnen!");
     //$content = fread($cookieFile,filesize($filePath));//fwrite($cookieFile,date("U"));//Zeit seit start der UNIX Epoche in Sekunden
     //fclose($cookieFile);
@@ -62,6 +66,6 @@ function removeIP($filePath, $ip = NULL){
     fwrite($cookieFile,$file);
     fclose($cookieFile);
 
-    return false;
+    return;
 }
 ?>

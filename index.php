@@ -23,7 +23,7 @@
 						<table align="center" border="0">
 							<tr>
 								<td><img src="spacer.gif" border="0" alt="" width="50" height="1"></td>
-								<td bgcolor="#ffffff"><font face="Arial" size="5">Wer wird… Login</font></td>
+								<td bgcolor="#ffffff"><font face="Arial" size="5">Wer wird... Login</font></td>
 								<td><img src="spacer.gif" border="0" alt="" width="50" height="1"></td>
 							</tr>
 						</table>

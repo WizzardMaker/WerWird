@@ -1,13 +1,13 @@
-﻿<?php include("../inc_header.php"); ?>
-<?php include("./getcookie-inf.php"); ?>
-
 <?php
+    include("./getcookie-inf.php");
+
 	if ($AdminCookie != "") {
-		include("./login.php");
+		//include("./login.php");
+        header("Location: ./login.php");
 	}
 	else { // kein cookie
 ?>
-
+<?php include("../inc_header.php"); ?>
 <table border="0" cellpadding="0" cellspacing="0" background="../bg.jpg" width="1024" height="634" align="center">
 	<tr>
 		<td valign="top">
@@ -56,5 +56,6 @@
 </table>
 <?php
 	} // ende else -> kein cookie
+
+    include("../inc_footer.php");
 ?>
-<?php include("../inc_footer.php"); ?>

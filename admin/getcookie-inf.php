@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 include_once "inc_cookie.php";
 
 	if (isset($_COOKIE['wwadmin'])) {

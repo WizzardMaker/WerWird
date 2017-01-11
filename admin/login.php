@@ -1,4 +1,4 @@
-﻿<?php include("./getcookie-inf.php"); ?>
+<?php include("./getcookie-inf.php"); ?>
 <?php
 	if(isset($_POST["username"]) && isset($_POST["time"]) ){
         if((int)$_POST["time"] - time() > -2700){
@@ -30,9 +30,9 @@
 		if ($AdminCookie != "master" && ($hasIP != true)) {
 //			echo "Fall 1";
 
-			//$test = setcookie ("wwadmin", "master", time()+2700, "/");
+			$test = setcookie ("wwadmin", "master", time()+2700, "/");
             $cookieFile = fopen("logins/logins.login", "a+") or die("Kann die Datei "."logins/logins.login nicht zum schreiben öffnen! Fehler war:'".error_get_last()["message"]."'");
-            fwrite($cookieFile,$_SERVER["REMOTE_ADDR"]."\t".date("U").PHP_EOL);//Zeit seit start der UNIX Epoche in Sekunden
+            //fwrite($cookieFile,$_SERVER["REMOTE_ADDR"]."\t".date("U").PHP_EOL);//Zeit seit start der UNIX Epoche in Sekunden
             fclose($cookieFile);
             $AdminCookie = "master";
 //			$keks = setcookie("admin", $loginName, time()+3600*24*365, "/");
@@ -43,7 +43,7 @@
 		$login = true;
 	}
 	else {
-		//Fall 3 und Fall 4hasIP("logins/logins.login")
+		//Fall 3 und Fall 4
 
 		if ($AdminCookie != "master" && ($hasIP != true)) {
 //			echo "Fall 3";
@@ -149,6 +149,7 @@
 <?php
 	}
 	else { //login=false
+        header('Location: ./admin.php');//ignore the rest
 ?>
 	<table align="center">
 		<tr>
@@ -156,9 +157,6 @@
 		</tr>
 	</table>
 <?php
-	//include("./admin.php");
-
-    header('Location: ./admin.php');
 	}
 
 ?>

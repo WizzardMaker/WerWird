@@ -37,7 +37,7 @@
 		$joker50_fehler = TRUE;
 		$fehlerstr = $fehlerstr."Die richtige Antwort darf nicht vom 50:50 Joker entfert werden<br>";
 	}
-    if($Pjoker50_1== $Pjoker50_2){
+    if($Pjoker50_1 == $Pjoker50_2){
         $fehler = $fehler + 1;
 		$joker50_fehler = TRUE;
 		$fehlerstr = $fehlerstr."Der 50:50 Joker muss 2 verschiedene Fragen elemenieren<br>";
